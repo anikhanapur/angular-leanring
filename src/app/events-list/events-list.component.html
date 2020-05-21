@@ -1,0 +1,13 @@
+<h1>Upcoming Angular Events<h1>
+<hr/>
+<!-- 
+Template variable are used to control methods and properties of child component from Parent component 
+It only works on non iterative components and will not work on componenet that has *ngFor
+<app-events-thumbnail #thumbnail [event]="events[0]">
+</app-events-thumbnail>
+<span>{{thumbnail.name}}</span>
+<button class="btn btn-primary" (click)="thumbnail.justDisplayData()">Hey Click here!!</button>
+-->
+
+<app-events-thumbnail [event]="event" *ngFor="let event of events">
+</app-events-thumbnail>
